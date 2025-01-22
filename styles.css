@@ -1,0 +1,317 @@
+/* Основные стили для страницы */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(210, 10%, 10%);
+    margin: 0;
+    padding: 20px;
+    color: rgba(224, 224, 224, 0.9);
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+/* Flex для ссылок */
+.links-flex {
+    display: flex;
+    flex-direction: row; /* Меняем направление на горизонтальное */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+    gap: 15px; /* Увеличиваем промежуток между элементами */
+    padding: 20px; /* Добавляем отступы внутри контейнера */
+    background-color: hsla(210, 10%, 25%, 0.5); /* Добавляем фон для контейнера */
+    border-radius: 10px; /* Скругляем углы контейнера */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+}
+
+.links-flex p {
+    margin: 0; /* Убираем стандартные отступы */
+    flex-basis: 100%; /* Каждый <p> занимает всю ширину */
+}
+
+/* Стили для ссылок внутри .links-flex */
+.links-flex a {
+    display: block;
+    flex-basis: calc(50% - 7.5px); /* Каждая ссылка занимает 50% ширины минус половина gap */
+    padding: 15px 20px; /* Увеличиваем отступы внутри ссылок */
+    background-color: hsla(210, 10%, 30%, 0.7); /* Добавляем фон */
+    color: #9b59b6; /* Цвет текста */
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px; /* Скругляем углы */
+    border: 2px solid #9b59b6; /* Добавляем границу */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Анимации */
+}
+
+.links-flex a:hover {
+    background-color: #8e44ad; /* Изменяем цвет фона при наведении */
+    color: #fff; /* Изменяем цвет текста при наведении */
+    transform: translateY(-3px); /* Сдвигаем ссылку вверх */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Увеличиваем тень */
+}
+
+.links-flex a:active {
+    transform: translateY(0); /* Возвращаем ссылку в исходное положение при нажатии */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Уменьшаем тень */
+}
+
+/* Общие стили для картинок */
+.volleyball-image,
+.additional-image {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    /* Увеличиваем радиус скругления */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Увеличиваем тень */
+    background-color: hsla(210, 10%, 25%, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Добавляем анимацию */
+}
+
+.volleyball-image:hover,
+.additional-image:hover {
+    transform: scale(1.05);
+    /* Увеличиваем размер при наведении */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    /* Увеличиваем тень при наведении */
+}
+
+/* Основной заголовок */
+.title {
+    color: #1f3a93;
+    text-align: center;
+    font-size: 3em;
+    /* Увеличиваем размер шрифта */
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Добавляем тень текста */
+}
+
+/* Заголовки h2 */
+h2 {
+    color: rgb(74, 144, 226);
+    font-size: 2em;
+    /* Увеличиваем размер шрифта */
+    font-weight: 700;
+    margin-bottom: 15px;
+    /* Увеличиваем отступ */
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    /* Добавляем тень текста */
+}
+
+/* Блок с правилами */
+#rules {
+    background-color: hsla(210, 10%, 20%, 0.9);
+    padding: 25px;
+    /* Увеличиваем отступы */
+    border-radius: 15px;
+    /* Увеличиваем радиус скругления */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Увеличиваем тень */
+    width: 100%;
+    max-width: 1000px;
+    min-height: 250px;
+    /* Увеличиваем минимальную высоту */
+}
+
+/* Список правил с Flexbox */
+.rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Увеличиваем промежуток между элементами */
+    padding-left: 25px;
+    /* Увеличиваем отступ */
+}
+
+.rules-list li {
+    background-color: hsla(210, 10%, 25%, 0.5);
+    padding: 15px;
+    /* Увеличиваем отступы */
+    border-radius: 8px;
+    /* Увеличиваем радиус скругления */
+    list-style-type: disc;
+    color: #b0b0b0;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+    /* Добавляем анимацию */
+}
+
+.rules-list li:hover {
+    background-color: hsla(210, 10%, 30%, 0.7);
+    /* Изменяем цвет при наведении */
+}
+
+/* Блок с описанием игроков */
+.players {
+    background-color: hsla(210, 10%, 20%, 0.9);
+    padding: 25px;
+    /* Увеличиваем отступы */
+    border-radius: 15px;
+    /* Увеличиваем радиус скругления */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Увеличиваем тень */
+    width: 100%;
+    max-width: 1000px;
+    min-height: 250px;
+    /* Увеличиваем минимальную высоту */
+}
+
+/* Grid для игроков */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    /* Увеличиваем промежуток между элементами */
+    margin-top: 15px;
+    /* Увеличиваем отступ */
+}
+
+.player {
+    background-color: hsla(210, 10%, 25%, 0.5);
+    padding: 15px;
+    /* Увеличиваем отступы */
+    border-radius: 8px;
+    /* Увеличиваем радиус скругления */
+    color: #b0b0b0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Добавляем анимацию */
+}
+
+.player:hover {
+    transform: translateY(-5px);
+    /* Сдвигаем элемент вверх при наведении */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    /* Увеличиваем тень при наведении */
+}
+
+/* Дополнительный текст про волейбол */
+.additional-info {
+    background-color: hsla(210, 10%, 20%, 0.9);
+    padding: 25px;
+    /* Увеличиваем отступы */
+    border-radius: 15px;
+    /* Увеличиваем радиус скругления */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Увеличиваем тень */
+    width: 100%;
+    max-width: 1000px;
+    min-height: 250px;
+    /* Увеличиваем минимальную высоту */
+}
+
+/* Grid для дополнительного текста */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    /* Увеличиваем промежуток между элементами */
+}
+
+/* Блок с ссылками */
+.links {
+    background-color: hsla(210, 10%, 20%, 0.9);
+    padding: 25px;
+    /* Увеличиваем отступы */
+    border-radius: 15px;
+    /* Увеличиваем радиус скругления */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Увеличиваем тень */
+    width: 100%;
+    max-width: 1000px;
+    min-height: 150px;
+    /* Увеличиваем минимальную высоту */
+}
+
+
+.links-flex p {
+    flex-basis: 50%;
+}
+
+/* Ссылки */
+a {
+    color: #9b59b6;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #8e44ad;
+}
+
+/* Анимация загрузки */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid #ff6347;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Карточка с анимацией */
+.card {
+    position: relative;
+    background-color: hsla(210, 10%, 20%, 0.9);
+    padding: 25px;
+    /* Увеличиваем отступы */
+    border-radius: 15px;
+    /* Увеличиваем радиус скругления */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Увеличиваем тень */
+    width: 100%;
+    max-width: 1000px;
+    min-height: 250px;
+    /* Увеличиваем минимальную высоту */
+    overflow: hidden;
+}
+
+.card .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 1s ease 2s;
+}
+
+.card h2,
+.card p {
+    opacity: 0;
+    transition: opacity 1s ease 3s;
+}
+
+.card.loaded .loader {
+    opacity: 0;
+}
+
+.card.loaded h2,
+.card.loaded p {
+    opacity: 1;
+}

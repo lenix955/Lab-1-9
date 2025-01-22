@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="form.html">Форма регистрации</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Форма регистрации</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Личная информация</legend>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+                <label for="birthdate">Дата рождения:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <label>Пол:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Мужской</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Женский</label>
+                </div>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Контактные данные</legend>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+123456789" required>
+
+                <label>Удобный интервал для связи:</label>
+                <div>
+                    <input type="checkbox" id="morning" name="contact-time" value="morning">
+                    <label for="morning">Утро</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="day" name="contact-time" value="day">
+                    <label for="day">День</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="evening" name="contact-time" value="evening">
+                    <label for="evening">Вечер</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="night" name="contact-time" value="night">
+                    <label for="night">Ночь</label>
+                </div>
+            </fieldset>
+
+            <button>
+                <span>Зарегистрироваться</span>
+            </button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Лабораторная работа №6</p>
+    </footer>
+</body>
+
+</html>
