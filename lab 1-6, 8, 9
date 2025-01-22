@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Волейбол</title>
+    <!-- Подключение шрифта из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <!-- Основной заголовок -->
+        <h1 class="title">Волейбол — игра для команды!</h1>
+        <!-- Картинка в начале сайта -->
+        <img src="https://img.milli.az/2018/05/16/voleybol_0254.jpg" alt="Волейбол" class="volleyball-image">
+
+        <!-- Блок с правилами -->
+        <div id="rules">
+            <h2>Правила игры</h2>
+            <p>Волейбол — это командная игра, где нужно перебрасывать мяч через сетку.</p>
+            <ul class="rules-list">
+                <li>Максимум 3 касания мяча.</li>
+                <li>Мяч не должен коснуться земли.</li>
+                <li>Команда выигрывает, если набирает 25 очков.</li>
+            </ul>
+        </div>
+
+        <!-- Блок с описанием игроков -->
+        <div class="players">
+            <h2>Игроки</h2>
+            <p>Каждая команда состоит из 6 человек, которые выполняют разные роли:</p>
+            <div class="players-grid">
+                <div class="player">
+                    <strong>Либеро</strong> — специалист по защите, играет в защите и не атакует.
+                </div>
+                <div class="player">
+                    <strong>Центральный блокирующий</strong> — отвечает за блокирование атак соперника.
+                </div>
+                <div class="player">
+                    <strong>Доигровщик</strong> — играет в атаке и защите, часто выполняет финальный удар.
+                </div>
+                <div class="player">
+                    <strong>Связующий</strong> — организует игру команды, распределяет мяч между игроками.
+                </div>
+                <div class="player">
+                    <strong>Диагональный</strong> — основной атакующий игрок, выполняет мощные удары.
+                </div>
+                <div class="player">
+                    <strong>Капитан</strong> — лидер команды, помогает в тактических решениях.
+                </div>
+            </div>
+            <p class="captain">Капитан команды — лидер и организатор. Он помогает команде держаться вместе и принимать
+                важные решения во время игры.</p>
+        </div>
+
+        <!-- Дополнительный текст про волейбол -->
+        <div class="additional-info">
+            <h2>История волейбола</h2>
+            <div class="info-grid">
+                <p>Волейбол был изобретён в 1895 году американцем Уильямом Морганом. Изначально игра называлась
+                    "мини-теннис", но позже была переименована в волейбол. Сегодня это популярный вид спорта, который
+                    играют во всём мире.</p>
+                <p>Волейбол — это не только физическая активность, но и командный дух. Игроки должны работать вместе,
+                    чтобы победить.</p>
+            </div>
+        </div>
+
+        <!-- Дополнительная картинка -->
+        <img src="https://bonus-betting.ru/wp-content/uploads/2019/09/volleyball-europe.jpg" alt="Ещё волейбол"
+            class="additional-image">
+
+        <!-- Блок с ссылками -->
+        <div class="links">
+            <h2>Полезные ссылки</h2>
+            <div class="links-flex">
+                <p>Узнай больше о волейболе на <a href="https://volley.ru/" target="_blank">официальном сайте ВФВ</a></p>
+                <p>Подробнее о правилах игры на <a href="https://ru.wikipedia.org/wiki/Волейбол"
+                        target="_blank">Википедии</a></p>
+            </div>
+        </div>
+
+        <!-- Новая карточка с анимацией загрузки -->
+        <div class="card">
+            <div class="loader"></div>
+            <h2>Новая карточка</h2>
+            <p>Содержимое новой карточки.</p>
+        </div>
+    </div>
+</body>
+
+</html>
